@@ -1,0 +1,42 @@
+@import './_normalize.css'; /* Нормализация стилей */
+@import './fonts.scss'; /* Шрифты */
+
+/* Глобальные стили */
+
+body {
+  overflow-x: hidden;
+  font-family: 'TT Lakes';
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button,
+ul,
+h1,
+figure,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Импорт стилей компонентов */
+@import './header';
+@import './container';
+@import './main.scss';
+@import './menu.scss';
+@import './service-description';
+@import './_visually-hidden.css';
+//@import './brands.scss';
+//@import './swiper.scss';

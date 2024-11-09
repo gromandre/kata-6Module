@@ -1,0 +1,29 @@
+.main {
+  padding-top: 24px;
+  background-color: #f8f8f8;
+
+  &__title {
+    font-weight: bold;
+    font-size: 28px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title--active {
+    position: relative;
+    margin-left: 0;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &__title--active::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #41f6d7;
+    border-radius: 0 3px 3px 0;
+    left: 0;
+  }
+}

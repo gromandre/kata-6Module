@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__left-block">
+            <button class="header__button header__button--burger-open"></button>
+            <a class="header__logo" href="#"
+              ><img src="./img/logo.png" alt="Логотип CPS"
+            /></a>
+          </div>
+          <div class="header__contacts-button">
+            <button class="header__button header__button--request"></button>
+            <button
+              class="header__button header__button--check-status"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="main__title main__title--active">Услуги и сервисы</h1>
+
+      <div class="container">
+        <nav class="menu" aria-label="Меню страницы">
+          <ul class="menu__list-items">
+            <li class="menu__item">
+              <a href="#" class="menu__link" aria-label="Ремонтируемые бренды"
+                >Ремонтируемые бренды</a
+              >
+            </li>
+            <li class="menu__item">
+              <a
+                href="#"
+                class="menu__link"
+                aria-label="Ремонтируемые устройства"
+                >Ремонтируемые устройства</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link" aria-label="Цены на услуги"
+                >Цены на услуги</a
+              >
+            </li>
+            <li class="menu__item">
+              <a
+                href="#"
+                class="menu__link"
+                aria-label="Адреса сервисных центров"
+                >Адреса сервисных центров</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link" aria-label="Специальные цены"
+                >Специальные цены</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link" aria-label="Отзывы">Отзывы</a>
+            </li>
+          </ul>
+          <div class="menu__background"></div>
+        </nav>
+
+        <section class="service-description">
+          <article class="service-description__inner">
+            <p class="service-description__text">
+              Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.
+            </p>
+            <p class="service-description__text">
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.
+            </p>
+          </article>
+          <button class="service-description__button">Читать далее</button>
+
+          <figure class="service-description__img-wrapper">
+            <picture>
+              <!-- Изображение для ПК (большой экран) -->
+              <source
+                srcset="./img/img-cps-large.jpg"
+                media="(min-width: 1025px)"
+              />
+              <!-- Изображение для планшетов -->
+              <source
+                srcset="./img/img-cps-medium.jpg"
+                media="(min-width: 601px)"
+              />
+              <!-- Изображение по умолчанию для мобильных устройств -->
+              <img
+                class="service-description__img"
+                src="./img/img-cps-small.jpg"
+                alt="Фото таблички Сервис-провайдера CPS при входе в кабинет."
+              />
+            </picture>
+            <figcaption
+              class="service-description__img-description visually-hidden"
+              >Сервис-провайдер CPS</figcaption
+            >
+          </figure>
+        </section>
+
+        <section class="brands">
+          <h2 class="brands__heading">Ремонт техники различных брендов</h2>
+
+          <div class="swiper">
+            <div class="swiper-wrapper brands__inner">
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/lenovo.png"
+                  alt="Логотип Lenovo"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/samsung.png"
+                  alt="Логотип Samsung"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/apple.png"
+                  alt="Логотип Apple"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/viewsonic.png"
+                  alt="Логотип ViewSonic"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/bosh.png"
+                  alt="Логотип Bosh"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/hp.png"
+                  alt="Логотип Hp"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/acer.png"
+                  alt="Логотип Aser"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/sony.png"
+                  alt="Логотип Sony"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/lenovo.png"
+                  alt="Логотип Lenovo"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/samsung.png"
+                  alt="Логотип Samsung"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+
+              <div class="swiper-slide brands__label">
+                <img
+                  src="./img/apple.png"
+                  alt="Логотип Apple"
+                  class="brands__image"
+                />
+                <button class="brands__button-next"></button>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- Градиентный слой -->
+          <div class="brands__gradient-overlay"></div>
+
+          <button class="brands__button--show">Показать все</button>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

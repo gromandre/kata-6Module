@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.eot'); /* IE9 */
+  src: url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/TTLakes-Regular.woff') format('woff'), /* Modern browsers */
+       url('../fonts/TTLakes-Regular.ttf') format('truetype'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Medium.eot'); /* IE9 */
+  src: url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/TTLakes-Medium.woff') format('woff'), /* Modern browsers */
+       url('../fonts/TTLakes-Medium.ttf') format('truetype'); /* Legacy iOS */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Bold.eot'); /* IE9 */
+  src: url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/TTLakes-Bold.woff') format('woff'), /* Modern browsers */
+       url('../fonts/TTLakes-Bold.ttf') format('truetype'); /* Legacy iOS */
+  font-weight: bold;
+  font-style: normal;
+}

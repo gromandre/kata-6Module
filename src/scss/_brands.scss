@@ -1,0 +1,110 @@
+.brands {
+  position: relative; // Для позиционирования градиента поверх Swiper
+
+  &__heading {
+    border-top: solid 1px #d9fff5;
+    background-image: linear-gradient(to right, #f8f8f8, #ffffff);
+    padding: 16px;
+    color: #7e7e82;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+    img {
+      max-width: 150px;
+      height: auto;
+    }
+  }
+
+  &__button-next,
+  &__show-all {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    &.brands__button-next {
+      transition: opacity 0.3s ease;
+
+      &::after {
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-image: url(../img/arrows-btn.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__gradient-overlay {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 60px; // Ширина градиентного слоя
+    height: 72px;
+    pointer-events: none; // Чтобы не перекрывать кликабельность
+    background: linear-gradient(
+      to right,
+      rgba(248, 248, 248, 0) 0%,
+      rgba(248, 248, 248, 1) 100%
+    );
+    z-index: 1;
+  }
+
+  &__button--show {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    &__inner.expanded {
+      max-height: 336px;
+    }
+
+    &__gradient-overlay {
+      display: none;
+    }
+
+    &__button--show {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      color: #1b1c21;
+      font-weight: 500;
+      font-size: 16px;
+      margin-top: 24px;
+      margin-left: 16px;
+
+      &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/expand.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 8px;
+        transition: transform 0.5s ease;
+      }
+
+      &.rotated::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
