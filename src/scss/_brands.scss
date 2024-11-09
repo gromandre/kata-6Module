@@ -12,14 +12,6 @@
     font-weight: 400;
   }
 
-  &__iner {
-    @media (min-width: 768px) {
-      &.expanded {
-        max-height: 336px;
-      }
-    }
-  }
-
   &__label {
     display: flex;
     align-items: center;

@@ -74,7 +74,10 @@
         </nav>
 
         <section class="service-description">
-          <article class="service-description__inner">
+          <article
+            class="service-description__inner folded"
+            id="service-description__inner"
+          >
             <p class="service-description__text">
               Мы являемся авторизованным сервисным центром по ремонту техники
               Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
@@ -87,7 +90,11 @@
               очередь, советуют нас родным и близким.
             </p>
           </article>
-          <button class="button-show-all">Читать далее</button>
+          <button
+            class="button-show-all"
+            data-target="service-description__inner"
+            >Читать далее</button
+          >
 
           <figure class="service-description__img-wrapper">
             <picture>
@@ -118,7 +125,7 @@
         <section class="brands">
           <h2 class="brands__heading">Ремонт техники различных брендов</h2>
 
-          <div class="swiper">
+          <div class="swiper folded" id="swiper1">
             <div class="swiper-wrapper brands__inner">
               <div class="swiper-slide brands__label">
                 <img
@@ -226,7 +233,9 @@
           <!-- Градиентный слой -->
           <div class="brands__gradient-overlay"></div>
 
-          <button class="brands__button-show-all button-show-all"
+          <button
+            class="brands__button-show-all button-show-all"
+            data-target="swiper1"
             >Показать все</button
           >
         </section>

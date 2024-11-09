@@ -1,9 +1,22 @@
 .swiper {
   overflow: visible;
   @media (min-width: 768px) {
-    max-height: 170px;
+    // max-height: 170px;
+    max-height: 0; /* Начальная высота (скрыто) */
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+  }
+}
+
+.swiper.folded {
+  @media (min-width: 768px) {
+    max-height: 170px; /* Высота свернутого блока, можно изменять для разных блоков */
+  }
+}
+
+.swiper.expanded {
+  @media (min-width: 768px) {
+    max-height: 9999px; /* Высота развернутого блока */
   }
 }
 

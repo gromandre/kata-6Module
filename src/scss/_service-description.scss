@@ -1,32 +1,21 @@
 .service-description {
+  &__inner {
+    max-height: 0; /* Скрыть контент по умолчанию */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+
+    &.folded {
+      max-height: 80px; /* Высота свернутого блока */
+    }
+
+    &.expanded {
+      max-height: 9999px; /* Высота развернутого блока */
+    }
+  }
+
   &__text {
     margin-top: 24px;
   }
-
-  // &__button {
-  //   position: relative;
-  //   font-weight: 500;
-  //   font-size: 16px;
-  //   display: flex;
-  //   align-items: center;
-  //   padding: 0;
-  //   background: none;
-  //   border: none;
-  //   margin-top: 16px;
-
-  //   &::before {
-  //     width: 24px;
-  //     height: 24px;
-  //     background-image: url(../img/arrows-btn.png);
-  //     content: '';
-
-  //     background-size: inherit;
-  //     background-repeat: no-repeat;
-  //     margin-right: 8px;
-  //     transform: translate(50% 50%);
-  //     background-position: center;
-  //   }
-  // }
 
   &__img-wrapper {
     margin-top: 16px;
