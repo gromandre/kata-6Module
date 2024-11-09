@@ -20,31 +20,17 @@
 
 .swiper-pagination {
   position: static;
-
-  &-bullet {
-    background-color: #dddddd; // цвет по умолчанию
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-    margin: 0 5px;
-    transition: background-color 0.3s;
-
-    &-active {
-      background: #b5b6bc;
-    }
-  }
 }
 
-@media (min-width: 768px) {
-  .swiper {
-    max-height: 170px;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+.swiper-pagination-bullet {
+  background-color: #dddddd; /* цвет по умолчанию */
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
 
-    &-wrapper {
-      transform: none !important; // Убираем все трансформации
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-  }
+.swiper-pagination-bullet-active {
+  background: #b5b6bc;
 }

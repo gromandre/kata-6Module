@@ -1,5 +1,6 @@
 @import './_normalize.css'; /* Нормализация стилей */
 @import './fonts.scss'; /* Шрифты */
+@import '~swiper/swiper-bundle.css';
 
 /* Глобальные стили */
 
@@ -38,5 +39,6 @@ a {
 @import './menu.scss';
 @import './service-description';
 @import './_visually-hidden.css';
-//@import './brands.scss';
-//@import './swiper.scss';
+@import './brands';
+@import './swiper';
+@import './btn-show';

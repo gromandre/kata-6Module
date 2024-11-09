@@ -1,10 +1,12 @@
 .brands {
-  position: relative; // Для позиционирования градиента поверх Swiper
+  position: relative; /* Для позиционирования градиента поверх Swiper */
+  margin-top: 24px;
 
   &__heading {
     border-top: solid 1px #d9fff5;
     background-image: linear-gradient(to right, #f8f8f8, #ffffff);
     padding: 16px;
+    margin: 0 -16px;
     color: #7e7e82;
     font-size: 16px;
     font-weight: 400;
@@ -27,28 +29,27 @@
     }
   }
 
-  &__button-next,
-  &__show-all {
+  &__button-next {
     position: relative;
     display: flex;
     align-items: center;
     padding: 0;
+    transition: opacity 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
 
-    &.brands__button-next {
-      transition: opacity 0.3s ease;
+    &::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      background-image: url(../img/button-next.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 
-      &::after {
-        content: '';
-        width: 40px;
-        height: 40px;
-        background-image: url(../img/arrows-btn.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      &:hover {
-        opacity: 0.5;
-      }
+    &:hover {
+      opacity: 0.5;
     }
   }
 
@@ -56,55 +57,14 @@
     position: absolute;
     top: 72px;
     right: 0;
-    width: 60px; // Ширина градиентного слоя
+    width: 60px; /* Ширина градиентного слоя */
     height: 72px;
-    pointer-events: none; // Чтобы не перекрывать кликабельность
+    pointer-events: none; /* Чтобы не перекрывать кликабельность */
     background: linear-gradient(
       to right,
       rgba(248, 248, 248, 0) 0%,
       rgba(248, 248, 248, 1) 100%
     );
     z-index: 1;
-  }
-
-  &__button--show {
-    display: none;
-  }
-
-  @media (min-width: 768px) {
-    &__inner.expanded {
-      max-height: 336px;
-    }
-
-    &__gradient-overlay {
-      display: none;
-    }
-
-    &__button--show {
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 0;
-      color: #1b1c21;
-      font-weight: 500;
-      font-size: 16px;
-      margin-top: 24px;
-      margin-left: 16px;
-
-      &::before {
-        content: '';
-        width: 24px;
-        height: 24px;
-        background-image: url(../img/expand.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-right: 8px;
-        transition: transform 0.5s ease;
-      }
-
-      &.rotated::before {
-        transform: rotate(180deg);
-      }
-    }
   }
 }
