@@ -1,0 +1,28 @@
+.button-show-all {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: none;
+  border: none;
+  margin-top: 16px;
+
+  &::before {
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/arrows-btn.png);
+    content: '';
+
+    background-size: inherit;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    transform: translate(50% 50%);
+    background-position: center;
+  }
+
+  &.rotated::before {
+    transform: rotate(180deg);
+  }
+}
