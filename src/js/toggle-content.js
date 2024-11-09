@@ -1,6 +1,6 @@
 //Скрытие контента с логотипами
-const content = document.querySelector('.swiper')
-// Получаем все кнопки с классом 'brands__button-show-all'
+const content = document.querySelector('.brands')
+// Получаем все кнопки с классом 'category-section__button-show-all'
 const buttons = document.querySelectorAll('.button-show-all')
 
 // Сохранение оригинального текста кнопки в data-атрибут при инициализации

@@ -1,4 +1,4 @@
-.brands {
+.technologies {
   overflow: visible;
   @media (min-width: 768px) {
     // max-height: 170px;
@@ -6,16 +6,35 @@
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
   }
+  &__card {
+    position: relative;
+    height: 160px;
+  }
+
+  &__name {
+    position: absolute;
+    font-size: 16px;
+    top: 16px;
+    left: 16px;
+    font-weight: 500;
+  }
+
+  &__card-button {
+    position: absolute;
+    font-size: 16px;
+    bottom: 16px;
+    right: 16px;
+  }
 }
 
-.brands.folded {
+.technologies.folded {
   @media (min-width: 768px) {
     max-height: 180px; /* Высота свернутого блока, можно изменять для разных блоков */
   }
 }
 
-.brands.expanded {
+.technologies.expanded {
   @media (min-width: 768px) {
-    max-height: 500px; /* Высота развернутого блока */
+    max-height: 600px; /* Высота развернутого блока */
   }
 }

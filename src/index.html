@@ -122,108 +122,110 @@
           </figure>
         </section>
 
-        <section class="brands">
-          <h2 class="brands__heading">Ремонт техники различных брендов</h2>
+        <section class="category-section">
+          <h2 class="category-section__heading"
+            >Ремонт техники различных брендов</h2
+          >
 
-          <div class="swiper folded" id="swiper1">
-            <div class="swiper-wrapper brands__inner">
-              <div class="swiper-slide brands__label">
+          <div class="swiper brands folded" id="brands">
+            <div class="swiper-wrapper category-section__inner">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/lenovo.png"
                   alt="Логотип Lenovo"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/samsung.png"
                   alt="Логотип Samsung"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/apple.png"
                   alt="Логотип Apple"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/viewsonic.png"
                   alt="Логотип ViewSonic"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/bosh.png"
                   alt="Логотип Bosh"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/hp.png"
                   alt="Логотип Hp"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/acer.png"
                   alt="Логотип Aser"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/sony.png"
                   alt="Логотип Sony"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/lenovo.png"
                   alt="Логотип Lenovo"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/samsung.png"
                   alt="Логотип Samsung"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
 
-              <div class="swiper-slide brands__label">
+              <div class="swiper-slide category-section__label">
                 <img
                   src="./img/apple.png"
                   alt="Логотип Apple"
-                  class="brands__image"
+                  class="category-section__image"
                 />
-                <button class="brands__button-next"></button>
+                <button class="category-section__button-next"></button>
               </div>
             </div>
 
@@ -231,11 +233,104 @@
           </div>
 
           <!-- Градиентный слой -->
-          <div class="brands__gradient-overlay"></div>
+          <div class="category-section__gradient-overlay"></div>
 
           <button
-            class="brands__button-show-all button-show-all"
-            data-target="swiper1"
+            class="category-section__button-show-all button-show-all"
+            data-target="brands"
+            >Показать все</button
+          >
+        </section>
+
+        <section class="category-section">
+          <h2 class="category-section__heading"
+            >Ремонт различных видов техники</h2
+          >
+
+          <div class="swiper technologies folded" id="technologies">
+            <div class="swiper-wrapper category-section__inner">
+              <div
+                class="swiper-slide category-section__label technologies__card technologies__card"
+              >
+                <p class="technologies__name">Ремонт ноутбуков</p>
+                <button
+                  class="category-section__button-next technologies__card-button"
+                ></button>
+              </div>
+
+              <div
+                class="swiper-slide category-section__label technologies__card"
+              >
+                <p class="technologies__name">Ремонт планшетов</p>
+                <button
+                  class="category-section__button-next technologies__card-button"
+                ></button>
+              </div>
+
+              <div
+                class="swiper-slide category-section__label technologies__card"
+              >
+                <p class="technologies__name">Ремонт ПК</p>
+                <button
+                  class="category-section__button-next technologies__card-button"
+                ></button>
+              </div>
+
+              <div
+                class="swiper-slide category-section__label technologies__card"
+              >
+                <p class="technologies__name">Ремонт мониторов</p>
+                <button
+                  class="category-section__button-next technologies__card-button"
+                ></button>
+              </div>
+
+              <div
+                class="swiper-slide category-section__label technologies__card"
+              >
+                <p class="technologies__name">Ремонт ноутбуков</p>
+                <button
+                  class="category-section__button-next technologies__card-button"
+                ></button>
+              </div>
+
+              <div
+                class="swiper-slide category-section__label technologies__card"
+              >
+                <p class="technologies__name">Ремонт планшетов</p>
+                <button
+                  class="category-section__button-next technologies__card-button"
+                ></button>
+              </div>
+
+              <div
+                class="swiper-slide category-section__label technologies__card"
+              >
+                <p class="technologies__name">Ремонт ПК</p>
+                <button
+                  class="category-section__button-next technologies__card-button"
+                ></button>
+              </div>
+
+              <div
+                class="swiper-slide category-section__label technologies__card"
+              >
+                <p class="technologies__name">Ремонт мониторов</p>
+                <button
+                  class="category-section__button-next technologies__card-button"
+                ></button>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- Градиентный слой -->
+          <div class="category-section__gradient-overlay"></div>
+
+          <button
+            class="category-section__button-show-all button-show-all"
+            data-target="technologies"
             >Показать все</button
           >
         </section>

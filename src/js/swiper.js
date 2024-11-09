@@ -1,12 +1,12 @@
 import Swiper from 'swiper'
 
-let swiper
+let swiper = null
 
 function initSwiper() {
   const pagination = document.querySelector('.swiper-pagination')
 
   // Проверяем, существует ли уже экземпляр Swiper и уничтожаем его, если он есть
-  if (swiper) {
+  if (swiper instanceof Swiper) {
     swiper.destroy(true, true)
     if (pagination) pagination.style.display = 'none' //убираем пагинацию
   }
@@ -15,7 +15,7 @@ function initSwiper() {
   if (window.innerWidth < 768) {
     swiper = new Swiper('.swiper', {
       slidesPerView: 'auto',
-      spaceBetween: 16,
+
       loop: true,
       pagination: {
         el: '.swiper-pagination',

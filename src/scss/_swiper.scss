@@ -1,32 +1,10 @@
-.swiper {
-  overflow: visible;
-  @media (min-width: 768px) {
-    // max-height: 170px;
-    max-height: 0; /* Начальная высота (скрыто) */
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
-}
-
-.swiper.folded {
-  @media (min-width: 768px) {
-    max-height: 170px; /* Высота свернутого блока, можно изменять для разных блоков */
-  }
-}
-
-.swiper.expanded {
-  @media (min-width: 768px) {
-    max-height: 500px; /* Высота развернутого блока */
-  }
-}
-
 .swiper-wrapper {
   padding: 16px;
   margin: 0 -16px;
+  gap: 16px;
   @media (min-width: 768px) {
     transform: none !important; /* Убираем все трансформации */
     flex-wrap: wrap;
-    gap: 7px;
   }
 }
 
@@ -44,10 +22,18 @@
   border-radius: 6px;
   padding: 16px;
   justify-content: space-between;
+
+  @media (min-width: 768px) {
+    width: 224px;
+  }
 }
 
 .swiper-pagination {
-  position: static;
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .swiper-pagination-bullet {

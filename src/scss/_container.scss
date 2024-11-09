@@ -1,4 +1,8 @@
 .container {
   margin: 0 16px;
   width: -webkit-fill-available;
+
+  @media (min-width: 768px) {
+    margin: 0 24px;
+  }
 }
