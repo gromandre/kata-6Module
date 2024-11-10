@@ -7,9 +7,9 @@ function initSwipers() {
   const swiperElements = document.querySelectorAll('.swiper') // ищем все элементы с классом 'swiper'
 
   // Уничтожаем все существующие Swiper-экземпляры
-  swipers.forEach((swiperInstance, index) => {
+  swipers.forEach((swiperInstance) => {
     if (swiperInstance && typeof swiperInstance.destroy === 'function') {
-      swiperInstance.destroy(true, true) // полное уничтожение
+      swiperInstance.destroy(true, true)
     }
   })
 
