@@ -1,35 +1,42 @@
 import Swiper from 'swiper'
 import { Pagination } from 'swiper/modules'
 
-let swiper = null
+let swipers = [] // массив для хранения всех экземпляров Swiper
 
-function initSwiper() {
-  const pagination = document.querySelector('.swiper-pagination')
+function initSwipers() {
+  const swiperElements = document.querySelectorAll('.swiper') // ищем все элементы с классом 'swiper'
 
-  // Проверяем, существует ли уже экземпляр Swiper и уничтожаем его, если он есть
-  if (swiper) {
-    // Проверка, существует ли экземпляр Swiper
-    swiper.destroy()
-    swiper = null // Сброс состояния
-    console.log('Удалил свайпер')
-  }
+  // Уничтожаем все существующие Swiper-экземпляры
+  swipers.forEach((swiperInstance, index) => {
+    if (swiperInstance && typeof swiperInstance.destroy === 'function') {
+      swiperInstance.destroy(true, true) // полное уничтожение
+    }
+  })
+
+  // Очищаем массив после уничтожения экземпляров
+  swipers = []
 
   // Инициализируем Swiper только на экранах менее 768 пикселей
   if (window.innerWidth < 768) {
-    swiper = new Swiper('.swiper', {
-      slidesPerView: 'auto',
-      modules: [Pagination],
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      }
+    swiperElements.forEach((swiperElement, index) => {
+      const newSwiper = new Swiper(swiperElement, {
+        slidesPerView: 'auto',
+        modules: [Pagination],
+        loop: true,
+        pagination: {
+          el: swiperElement.querySelector('.swiper-pagination'),
+          clickable: true
+        }
+      })
+
+      // Добавляем новый экземпляр Swiper в массив
+      swipers.push(newSwiper)
     })
   }
 }
 
 // Проверка при загрузке страницы
-initSwiper()
+initSwipers()
 
 // Проверка при изменении размера окна
-window.addEventListener('resize', initSwiper)
+window.addEventListener('resize', initSwipers)
