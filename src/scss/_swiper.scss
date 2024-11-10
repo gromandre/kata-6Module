@@ -29,11 +29,11 @@
 }
 
 .swiper-pagination {
-  position: absolute;
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
+  position: static;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .swiper-pagination-bullet {
