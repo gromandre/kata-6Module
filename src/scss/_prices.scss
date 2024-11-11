@@ -1,0 +1,138 @@
+.prices {
+  position: relative;
+
+  @media (min-width: 768px) {
+  }
+
+  &__inner {
+    @media (min-width: 768px) {
+      flex-direction: column;
+      margin: 0 auto;
+      margin-top: 64px;
+
+      gap: 16px;
+      padding: 16px;
+      padding-bottom: 0;
+      background-color: #fff;
+      border-radius: 6px;
+      width: auto;
+    }
+  }
+
+  &__card {
+    // position: relative;
+    flex-direction: column;
+    align-items: baseline;
+    height: auto;
+    padding: 16px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0px;
+
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #eaeaea;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 16px;
+
+    &:nth-child(3) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+      &:nth-child(1) {
+        width: 360px;
+      }
+
+      &:nth-child(2) {
+        width: 80px;
+      }
+
+      &:nth-child(3) {
+        width: 80px;
+      }
+
+      margin-bottom: 0;
+    }
+  }
+
+  &__name-cell {
+    color: #7e7e82;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 4px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1b1c21;
+    text-align: start;
+  }
+
+  &__name-services,
+  &__name-price,
+  &__name-term {
+    @media (min-width: 768px) {
+      display: block;
+      position: absolute;
+      top: -32px;
+    }
+  }
+
+  &__card-button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #ff3e79;
+    border: none;
+    border-radius: 16px;
+    width: 119px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    padding-right: 20px;
+
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      right: 16px;
+      background: url(../img/dropdown.png) no-repeat;
+    }
+
+    @media (min-width: 768px) {
+      position: static;
+    }
+  }
+
+  &__gradient-overlay {
+    height: 190px;
+  }
+
+  &__button-show-all {
+    display: none;
+  }
+}

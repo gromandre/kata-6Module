@@ -19,6 +19,8 @@ body {
 button,
 ul,
 h1,
+h2,
+h3,
 figure,
 p {
   padding: 0;
@@ -44,3 +46,4 @@ a {
 @import './category-section';
 @import './brands';
 @import './technologies';
+@import './prices';
