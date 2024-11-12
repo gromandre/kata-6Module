@@ -22,6 +22,23 @@
   &__left-block {
     display: flex;
     flex-grow: 1;
+
+    @media (min-width: 768px) {
+      flex-grow: 0;
+    }
+  }
+
+  &__right-block {
+    display: flex;
+  }
+
+  &__action-menu {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      margin-right: 20px;
+    }
   }
 
   &__logo {
@@ -46,6 +63,12 @@
     cursor: pointer;
     @include opacity-transition(0.6);
 
+    &--burger-open {
+      @media (min-width: 768px) {
+        margin-right: 20px;
+      }
+    }
+
     &::after {
       content: '';
       position: relative;
@@ -60,6 +83,10 @@
 
     &--burger-open::after {
       background-image: url(../img/burger.png);
+      @media (min-width: 768px) {
+        border-right: 2px solid #eaeaea;
+        padding-right: 20px;
+      }
     }
 
     &--request::after {
