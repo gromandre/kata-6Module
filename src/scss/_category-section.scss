@@ -63,10 +63,10 @@
 
   &__gradient-overlay {
     position: absolute;
-    top: 86px;
+    top: 16px;
     right: -20px;
     width: 60px; /* Ширина градиентного слоя */
-    height: 72px;
+    height: 100%;
     pointer-events: none; /* Чтобы не перекрывать кликабельность */
     background: linear-gradient(
       to right,
