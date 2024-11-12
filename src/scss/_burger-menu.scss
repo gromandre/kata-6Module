@@ -1,0 +1,159 @@
+$primary-color: #fff;
+$secondary-color: #7e7e82;
+$accent-color: #41f6d7;
+$text-color: #1b1c21;
+$box-shadow: 5px 0 52px rgba(14, 24, 80, 0.2);
+
+.burger-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $primary-color;
+  width: 100%;
+  max-width: 360px;
+  height: 100vh;
+  padding: 18px 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: $box-shadow;
+  z-index: 100;
+  box-sizing: border-box;
+
+  &__nav {
+    margin-top: 40px;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+  }
+
+  &__link-page {
+    color: $text-color;
+  }
+
+  &__link-page--active {
+    margin-left: -24px;
+    padding-left: 21px;
+    border-left: 3px solid $accent-color;
+    color: $secondary-color;
+  }
+
+  &__bottom {
+    margin-top: auto;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  &__email {
+    margin-bottom: 12px;
+  }
+
+  &__phone-number {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__langs {
+    margin-top: 40px;
+    display: flex;
+  }
+
+  &__lang-item {
+    margin-right: 7px;
+  }
+
+  &__link-lang--active {
+    color: $secondary-color;
+  }
+
+  a {
+    color: $text-color;
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  background-color: $primary-color;
+  width: 100%;
+  justify-content: space-between;
+
+  &__left-block {
+    align-items: center;
+    display: flex;
+  }
+
+  &__logo {
+    margin-left: 16px;
+  }
+}
+
+.action-menu {
+  display: flex;
+
+  &__service,
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    transition: opacity 0.5s ease;
+    border: none;
+    background: none;
+
+    &--close,
+    &--search,
+    &--call,
+    &--message,
+    &--profile {
+      &::after {
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--close::after {
+      background-image: url(../img/close-burger.png);
+    }
+
+    &--search::after {
+      background-image: url(../img/search.png);
+    }
+
+    &--call::after {
+      background-image: url(../img/call.png);
+    }
+
+    &--message::after {
+      background-image: url(../img/chat.png);
+    }
+
+    &--profile::after {
+      background-image: url(../img/profile.png);
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__button--call,
+  &__button--message {
+    margin-right: 16px;
+  }
+}
