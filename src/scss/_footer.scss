@@ -1,0 +1,39 @@
+.footer {
+  margin-top: 40px;
+  border-top: 1px solid #d9fff5;
+  padding-top: 16px;
+
+  &__text {
+    font-size: 14px;
+    color: #7e7e82;
+    margin-bottom: 16px;
+    text-align: center;
+    line-height: 16px;
+
+    a {
+      color: #7e7e82;
+      transition: max-height 0.3s ease-in-out;
+
+      &:hover {
+        color: #ff3e79;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+      flex: 1;
+
+      &:first-child {
+        text-align: start;
+      }
+
+      &:last-child {
+        text-align: end;
+      }
+    }
+  }
+}
