@@ -6,6 +6,10 @@
 
     &.folded {
       max-height: 80px; /* Высота свернутого блока */
+
+      @media (min-width: 768px) {
+        max-height: 20vw;
+      }
     }
 
     &.expanded {
@@ -24,5 +28,18 @@
   &__img {
     width: 100%;
     object-fit: contain;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 16px;
+
+    & > * {
+      flex: 1;
+    }
+
+    &__article-wrapper {
+      padding-right: 16px;
+    }
   }
 }
