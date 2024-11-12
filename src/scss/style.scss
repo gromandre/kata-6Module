@@ -5,6 +5,10 @@
 
 /* Глобальные стили */
 
+html {
+  scroll-behavior: smooth; /* Включение плавной прокрутки */
+}
+
 body {
   overflow-x: hidden;
   font-family: 'TT Lakes';
