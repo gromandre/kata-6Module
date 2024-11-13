@@ -4,6 +4,8 @@ $accent-color: #41f6d7;
 $text-color: #1b1c21;
 $box-shadow: 5px 0 52px rgba(14, 24, 80, 0.2);
 
+$window-width: 100vw;
+
 .burger-menu {
   position: absolute;
   left: 0;
@@ -21,11 +23,12 @@ $box-shadow: 5px 0 52px rgba(14, 24, 80, 0.2);
   box-sizing: border-box;
 
   @media (min-width: 1440px) {
-    position: static;
+    position: fixed;
     display: flex !important;
     box-shadow: none;
     width: 300px;
-    height: 900px;
+    height: 100vh;
+    transform: translate(50%);
   }
 
   &__nav {
