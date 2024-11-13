@@ -12,11 +12,22 @@
 
   justify-content: space-between;
 
+  @media (min-width: 1440px) {
+    display: block;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     height: 100%;
     align-items: center;
+
+    @media (min-width: 1440px) {
+      position: absolute;
+      right: 22px;
+      top: 42px;
+      height: auto;
+    }
   }
 
   &__left-block {
@@ -25,6 +36,10 @@
 
     @media (min-width: 768px) {
       flex-grow: 0;
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
     }
   }
 
@@ -38,6 +53,10 @@
     @media (min-width: 768px) {
       display: block;
       margin-right: 20px;
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
     }
   }
 
@@ -53,6 +72,17 @@
     height: 40px;
     border-left: 2px solid #eaeaea;
     padding-left: 20px;
+
+    @media (min-width: 1440px) {
+      border: none;
+
+      & button {
+        font-size: initial;
+        z-index: 10;
+        align-items: center;
+        margin-left: 32px;
+      }
+    }
   }
 
   &__button {
@@ -61,6 +91,7 @@
     background: none;
     border: none;
     cursor: pointer;
+    font-size: 0;
     @include opacity-transition(0.6);
 
     &--burger-open {
@@ -98,6 +129,13 @@
     }
     &--check-status::after {
       background-image: url(../img/checkstatus.png);
+    }
+
+    &--request::after,
+    &--check-status::after {
+      @media (min-width: 1440px) {
+        left: 30px;
+      }
     }
   }
 }

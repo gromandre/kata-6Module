@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body>
+  <body class="content">
     <header class="header">
       <div class="burger-menu">
         <div class="mobile-menu">
@@ -133,10 +133,12 @@
               </div>
             </div>
             <div class="header__contacts-button">
-              <button class="header__button header__button--request"></button>
-              <button
-                class="header__button header__button--check-status"
-              ></button>
+              <button class="header__button header__button--request"
+                >Оставить заявку</button
+              >
+              <button class="header__button header__button--check-status"
+                >Статус ремонта</button
+              >
             </div>
           </div>
         </div>
@@ -144,9 +146,8 @@
     </header>
 
     <main class="main">
-      <h1 class="main__title main__title--active">Услуги и сервисы</h1>
-
       <div class="container">
+        <h1 class="main__title main__title--active">Услуги и сервисы</h1>
         <nav class="menu" aria-label="Меню страницы">
           <ul class="menu__list-items">
             <li class="menu__item">

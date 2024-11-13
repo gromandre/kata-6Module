@@ -7,7 +7,17 @@
     margin: 0 24px;
   }
 
+  @media (min-width: 1160px) and (max-width: 1440px) {
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  }
+
   @media (min-width: 1440px) {
     margin: 0 32px;
+  }
+}
+
+.header > .container {
+  @media (min-width: 1440px) {
+    margin: 0;
   }
 }

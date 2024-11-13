@@ -11,8 +11,6 @@ function toggleMenu(isOpen) {
   body.style.overflow = isOpen ? 'hidden' : 'auto'
   headerInner.style.opacity = isOpen ? '0.03' : '1'
   main.style.opacity = isOpen ? '0.03' : '1'
-
-  // Условное изменение границы
   header.style.borderBottom = isOpen ? 'none' : '1px solid #d9fff5'
 }
 

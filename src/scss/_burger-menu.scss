@@ -20,6 +20,14 @@ $box-shadow: 5px 0 52px rgba(14, 24, 80, 0.2);
   z-index: 100;
   box-sizing: border-box;
 
+  @media (min-width: 1440px) {
+    position: static;
+    display: flex !important;
+    box-shadow: none;
+    width: 300px;
+    height: 900px;
+  }
+
   &__nav {
     margin-top: 40px;
   }
@@ -33,10 +41,19 @@ $box-shadow: 5px 0 52px rgba(14, 24, 80, 0.2);
   }
 
   &__link-page--active {
-    margin-left: -24px;
-    padding-left: 21px;
-    border-left: 3px solid $accent-color;
-    color: $secondary-color;
+    margin-left: -16px;
+    padding-left: 16px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      background-color: #41f6d7;
+      border-radius: 0 3px 3px 0;
+      left: 0;
+    }
   }
 
   &__bottom {
@@ -89,6 +106,10 @@ $box-shadow: 5px 0 52px rgba(14, 24, 80, 0.2);
 
   &__logo {
     margin-left: 16px;
+
+    @media (min-width: 1440px) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -112,6 +133,12 @@ $box-shadow: 5px 0 52px rgba(14, 24, 80, 0.2);
     transition: opacity 0.5s ease;
     border: none;
     background: none;
+
+    &--close {
+      @media (min-width: 1440px) {
+        display: none;
+      }
+    }
 
     &--close,
     &--search,
