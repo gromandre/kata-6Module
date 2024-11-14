@@ -29,6 +29,7 @@ messageButtonsOpen.forEach((button) => {
   button.addEventListener('click', () => {
     toggleMenu(false, burgerMenu)
     toggleMenu(true, feedback)
+    body.style.maxWidth = 'none'
   })
 })
 
@@ -39,6 +40,7 @@ callButtonsOpen.forEach((button) => {
   button.addEventListener('click', () => {
     toggleMenu(false, burgerMenu)
     toggleMenu(true, modalCall)
+    body.style.maxWidth = 'none'
   })
 })
 
@@ -49,6 +51,7 @@ function closeFormsAndRestoreHeader() {
   toggleMenu(false, feedback) // Закрытие формы обратной связи
   toggleMenu(false, modalCall) // Закрытие формы обратного звонка
   toggleMenu(false, burgerMenu)
+  body.style.maxWidth = '1440px'
 }
 
 const buttonsCloseFeedback = document.querySelectorAll(
