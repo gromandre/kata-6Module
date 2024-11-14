@@ -1776,6 +1776,9 @@ a {
   z-index: 200;
   box-sizing: border-box;
   overflow: scroll; }
+  @media (min-width: 768px) {
+    .burger-menu {
+      overflow: auto; } }
   @media (min-width: 1440px) {
     .burger-menu {
       position: fixed;
