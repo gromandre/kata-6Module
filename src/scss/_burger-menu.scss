@@ -23,6 +23,10 @@ $window-width: 100vw;
   box-sizing: border-box;
   overflow: scroll;
 
+  @media (min-width: 768px) {
+    overflow: auto;
+  }
+
   @media (min-width: 1440px) {
     position: fixed;
     display: flex !important;
