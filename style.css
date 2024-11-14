@@ -1774,7 +1774,8 @@ a {
   justify-content: space-between;
   box-shadow: 5px 0 52px rgba(14, 24, 80, 0.2);
   z-index: 200;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: scroll; }
   @media (min-width: 1440px) {
     .burger-menu {
       position: fixed;
@@ -1888,7 +1889,8 @@ a {
   height: 100vh;
   padding: 16px;
   box-shadow: -5px 0 52px rgba(14, 24, 80, 0.2);
-  border-left: 1px solid #d9fff5; }
+  border-left: 1px solid #d9fff5;
+  overflow: scroll; }
   .feedback__heading {
     margin-top: 40px;
     position: relative;
