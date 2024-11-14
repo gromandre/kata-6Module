@@ -21,6 +21,7 @@ $window-width: 100vw;
   box-shadow: $box-shadow;
   z-index: 200;
   box-sizing: border-box;
+  overflow: scroll;
 
   @media (min-width: 1440px) {
     position: fixed;
