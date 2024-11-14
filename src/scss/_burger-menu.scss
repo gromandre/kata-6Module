@@ -19,7 +19,7 @@ $window-width: 100vw;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: $box-shadow;
-  z-index: 100;
+  z-index: 200;
   box-sizing: border-box;
 
   @media (min-width: 1440px) {

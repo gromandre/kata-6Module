@@ -9,6 +9,7 @@
   height: 100vh;
   padding: 16px;
   box-shadow: -5px 0 52px rgba(14, 24, 80, 0.2);
+  border-left: 1px solid #d9fff5;
 
   &__heading {
     margin-top: 40px;
@@ -66,5 +67,19 @@
     &::after {
       margin-right: 16px;
     }
+  }
+}
+
+#buttonCloseFeedback {
+  display: flex;
+  position: absolute;
+  top: 47px;
+  left: -72px;
+
+  @media (min-width: 320px) {
+    display: flex;
+    position: static;
+    top: 0;
+    left: 0;
   }
 }

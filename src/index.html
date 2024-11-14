@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <aside class="feedback">
+  <aside class="feedback" id="feedback">
     <div class="mobile-menu">
       <div class="mobile-menu__left-block">
         <div class="action-menu">
@@ -37,6 +37,33 @@
     </div>
     <button class="prices__card-button feedback__button">Заказать</button>
   </aside>
+
+  <aside class="feedback" id="modal-call">
+    <div class="mobile-menu">
+      <div class="mobile-menu__left-block">
+        <div class="action-menu">
+          <button
+            id="buttonCloseFeedback"
+            class="action-menu__button action-menu__button--close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="feedback__heading">Заказать звонок</h2>
+    <form action="" class="feedback__form">
+      <input type="phone" placeholder="Телефон" />
+    </form>
+
+    <div class="feedback__text">
+      Нажимая “отправить”, вы даете согласие на
+      <a href="#" class="feedback__link">обработку персональных данных</a> и
+      соглашаетесь с нашей
+      <a href="#" class="feedback__link">политикой конфиденциальности</a>
+    </div>
+    <button class="prices__card-button feedback__button">Заказать</button>
+  </aside>
+  <aside class="backgroun-fill"></aside>
   <body class="content">
     <header class="header">
       <div class="burger-menu">
